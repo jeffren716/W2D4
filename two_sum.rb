@@ -29,7 +29,7 @@ end
 def best_two_sum?(arr, target)
   hash = Hash.new(0)
   arr.each do |num|
-    return true if hash.keys.include?(target - num)
+    return true if hash[target-num] > 0
     hash[num] += 1
   end
 
